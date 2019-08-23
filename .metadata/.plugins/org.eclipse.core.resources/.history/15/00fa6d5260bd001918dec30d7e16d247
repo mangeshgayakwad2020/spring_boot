@@ -1,0 +1,35 @@
+package com.greatdigitallab.springboot.demo.mydemoapp.rest;
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DemoRestController {
+
+	@Value("${trainer.name}")
+	private String trainerName;
+
+	@Value("${team.name}")
+	private String teamName;
+
+	// expose "/" that return "Hello World"
+	@GetMapping("/")
+	public String displayHello() {
+		return "Hello World! Time on server is " + LocalDateTime.now();
+	}
+
+	// expose a new endpoint for "workout"
+	@GetMapping("/workout")
+	public String getDailyWorkout() {
+		return "Run daily 5KM!!!";
+	}
+
+	// expose a new endpoint for "workout"
+	@GetMapping("/workout")
+	public String getDailyWorkout() {
+		return "Run daily 5KM!!!";
+	}
+}

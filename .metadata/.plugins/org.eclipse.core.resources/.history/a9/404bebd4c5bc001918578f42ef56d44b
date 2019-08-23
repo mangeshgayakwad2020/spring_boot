@@ -1,0 +1,5 @@
+package com.greatdigitallab.springboot.demo.mydemoapp.rest;
+
+public class DemoRestController {
+
+}

@@ -1,0 +1,15 @@
+# Configure Server Port
+server.port=8080
+
+# Configure custom props
+trainer.name=Mangesh Gayakwad
+team.name=Warriors Team
+
+# App specific info properties
+info.app.name=Spring Boot Demo
+info.app.description=Spring Boot Practice Examples
+info.app.version=1.0.0
+
+# Use wildcard "*" to expose all endpoints
+# Can also expose individual endpoints with a comma-delimited list
+management.endpoints.web.exposure.include=*

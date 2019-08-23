@@ -1,0 +1,6 @@
+# Configure Server Port
+server.port=8585
+
+# Configure custom props
+trainer.name=Mangesh Gayakwad
+team.name=Warriors Team

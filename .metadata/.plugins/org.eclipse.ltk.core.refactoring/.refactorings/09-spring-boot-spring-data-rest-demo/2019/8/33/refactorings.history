@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;09-spring-boot-spring-data-rest-demo&apos;&#x0D;&#x0A;- Original project: &apos;09-spring-boot-spring-data-rest-demo&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     09-spring-boot-spring-data-rest-demo/src/main/java/com.greatdigitallab.springbootcruddemo.rest&#x0D;&#x0A;     09-spring-boot-spring-data-rest-demo/src/main/java/com.greatdigitallab.springbootcruddemo.service" description="Delete elements" element1="/src\/main\/java&lt;com.greatdigitallab.springbootcruddemo.service" element2="/src\/main\/java&lt;com.greatdigitallab.springbootcruddemo.rest" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1565964770567" subPackages="false" version="1.0"/>
+</session>

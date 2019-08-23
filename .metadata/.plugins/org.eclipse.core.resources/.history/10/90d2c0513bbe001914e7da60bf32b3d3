@@ -1,0 +1,22 @@
+# Configure Server Port
+server.port=7070
+
+# Configure custom props
+trainer.name=Mangesh Gayakwad
+team.name=Warriors Team
+
+# App specific info properties
+info.app.name=Spring Boot Demo
+info.app.description=Spring Boot Practice Examples
+info.app.version=1.0.0
+
+# Use wildcard "*" to expose all endpoints
+# Can also expose individual endpoints with a comma-delimited list
+management.endpoints.web.exposure.include=*
+
+# Override Spring Security Default username and password
+spring.security.user.name=shivaji
+spring.security.user.password=raje
+
+# Exclude individual endpoints with a comma-delimited list
+#management.endpoints.web.exposure.exclude=health,info

@@ -1,0 +1,16 @@
+package com.greatdigitallab.springboot.demo.mydemoapp.rest;
+
+import java.time.LocalDateTime;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DemoRestController {
+
+	// expose "/" that return "Hello World"
+	@GetMapping("/")
+	public String displayHello() {
+		return "Hello World! Time on server is " + LocalDateTime.now();
+	}
+}

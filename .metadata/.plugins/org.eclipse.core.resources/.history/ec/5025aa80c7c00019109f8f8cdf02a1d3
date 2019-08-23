@@ -1,0 +1,5 @@
+package com.greatdigitallab.springbootthymeleafdemo.controller;
+
+public class ThymeleafDemoController {
+
+}

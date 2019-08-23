@@ -1,0 +1,71 @@
+package com.greatdigitallab.springbootcruddemo.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.greatdigitallab.springbootcruddemo.entity.Employee;
+
+@Repository
+public class EmployeeDAOJpaImpl implements EmployeeDAO {
+
+	// define entity manager
+	private EntityManager entityManager;
+
+	// inject the entity manager using constructor injection
+	@Autowired
+	public EmployeeDAOJpaImpl(EntityManager entityManager) {
+		
+		this.entityManager = entityManager;
+	}
+	
+	@Override
+	public List<Employee> findAll() {
+
+		// create the query
+		Query query = entityManager.createQuery("from Employee");
+		
+		// execute query and get result list
+		@SuppressWarnings("unchecked")
+		List<Employee> employees = query.getResultList();
+		
+		// return the results
+		return employees;
+	}
+
+	@Override
+	public Employee findById(int id) {
+
+		// get employee
+		Employee employee = entityManager.find(Employee.class, id);
+		
+		// return employee
+		return employee;
+	}
+
+	@Override
+	public void save(Employee employee) {
+
+		// save if id == 0 else update the employee
+		Employee dbEmployee = entityManager.merge(employee);
+		
+		// update with id from db so we can return generated id
+		employee.setId(dbEmployee.getId());
+	}
+
+	@Override
+	public void deleteById(int id) {
+
+		// Delete object with primary key
+		Query query = entityManager.createQuery("delete from Employee where id=:employeeId");
+		
+		query.setParameter("employeeId", id);
+		
+		query.executeUpdate();
+	}
+
+}

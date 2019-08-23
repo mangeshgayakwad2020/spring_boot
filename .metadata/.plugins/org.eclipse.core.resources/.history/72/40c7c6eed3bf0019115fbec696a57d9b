@@ -1,0 +1,47 @@
+package com.greatdigitallab.springbootcruddemo.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.stereotype.Repository;
+
+import com.greatdigitallab.springbootcruddemo.entity.Employee;
+
+@Repository
+public class EmployeeDAOJpaImpl implements EmployeeDAO {
+
+	// define entity manager
+	private EntityManager entityManager;
+
+	// inject the entity manager using constructor injection
+	public EmployeeDAOJpaImpl(EntityManager entityManager) {
+		
+		this.entityManager = entityManager;
+	}
+	
+	@Override
+	public List<Employee> findAll() {
+
+		return null;
+	}
+
+	@Override
+	public Employee findById(int id) {
+
+		return null;
+	}
+
+	@Override
+	public void save(Employee employee) {
+
+
+	}
+
+	@Override
+	public void deleteById(int id) {
+
+
+	}
+
+}
